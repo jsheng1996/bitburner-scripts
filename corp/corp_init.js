@@ -19,6 +19,7 @@ export async function main(ns) {
   
   //Constants
   const cities = ["Sector-12", "Aevum", "Volhaven", "Chongqing", "New Tokyo", "Ishima"];
+  const upgrades = ["FocusWires", "Neural Accelerators", "Speech Processor Implants", "Nuoptimal Nootropic Injector Implants", "Smart Factories"];
   
   //Implement starting strategies
 
