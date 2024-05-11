@@ -41,7 +41,7 @@ export async function main(ns) {
   for (const city of cities){
     ns.print("===" + city + "===");
     if (ns.corporation.getMaterial("Agriculture", city, "Hardware").stored<2800){
-      ns.corporation.bulkPurchase("Agriculture", city, "Hardware", 2800 - ns.corporation.getMaterial("Agriculture", city, "Hardware"));
+      ns.corporation.bulkPurchase("Agriculture", city, "Hardware", 2800 - ns.corporation.getMaterial("Agriculture", city, "Hardware").stored);
     }
     if (ns.corporation.getMaterial("Agriculture", city, "Robots").stored<96){
       ns.corporation.bulkPurchase("Agriculture", city, "Robots", 96 - ns.corporation.getMaterial("Agriculture", city, "Robots").stored);
