@@ -46,7 +46,8 @@ export async function main(ns) {
     ns.print("Employees hired");
     ns.corporation.setSmartSupply("Agriculture", city, true);
     ns.print("Smart Supply Set");
-    ns.corporation.sellProduct("Agriculture", city, "Food", "MAX", "MP", true);
+    ns.corporation.sellMaterial("Agriculture", city, "Food", "MAX", "MP", true);
+    ns.corporation.sellMaterial("Agriculture", city, "Plants", "MAX", "MP", true);
     ns.print("Sellside set");
   }
 
