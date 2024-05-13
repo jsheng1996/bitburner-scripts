@@ -3,8 +3,6 @@ export async function main(ns) {
   ns.disableLog('ALL'); ns.tail();
   ns.print("Corpo shares script started")
 
-  const shares_to_trade = ns.corporation.getCorporation().numShares/2;
-
   var corp = ns.corporation.getCorporation();
   if (corp.dividendRate == 1){
     ns.corporation.buyBackShares(ns.corporation.getCorporation().numShares);
