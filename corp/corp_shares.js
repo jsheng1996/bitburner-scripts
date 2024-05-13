@@ -4,7 +4,7 @@ export async function main(ns) {
   ns.print("Corpo shares script started");
 
   var corp = ns.corporation.getCorporation();
-  if (corp.dividendRate == 1){
+  if (corp.dividendRate == 0.9){
     ns.corporation.buyBackShares(ns.corporation.getCorporation().numShares);
     ns.corporation.issueDividends(0);
     ns.print("Bought" + ns.corporation.getCorporation().numShares/2000000 +"m shares");
