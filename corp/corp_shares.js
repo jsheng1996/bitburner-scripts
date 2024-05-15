@@ -12,7 +12,7 @@ export async function main(ns) {
   } else{
     ns.corporation.sellShares(ns.corporation.getCorporation().numShares/2);
     ns.corporation.issueDividends(0.9);
-    ns.print("Sold" + ns.corporation.getCorporation().numShares*2/1000000 +"m shares");
+    ns.print("Sold" + ns.corporation.getCorporation().numShares*/1000000 +"m shares");
     ns.print("Set div rate to 90%");
   }
 }
