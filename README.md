@@ -6,6 +6,8 @@ server/quote.js - u/Metalax_Redux
 
 server/deploy.js - hydroflame
 
+hn_upgrade.js - iuriguilherme
+
 
 ## About Bitburner
 
