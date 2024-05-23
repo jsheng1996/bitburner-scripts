@@ -10,9 +10,15 @@ export async function main(ns) {
   //1.7
   for (const city of cities){
     ns.print("===" + city + "===");
-    ns.corporation.bulkPurchase("Agriculture", city, "Hardware", 125);
-    ns.corporation.bulkPurchase("Agriculture", city, "AI Cores", 75);
-    ns.corporation.bulkPurchase("Agriculture", city, "Real Estate", 27000);
+    if (ns.corporation.getMaterial("Agriculture", city, "Hardware").stored<125){
+      ns.corporation.bulkPurchase("Agriculture", city, "Hardware", 125 - ns.corporation.getMaterial("Agriculture", city, "Hardware").stored);
+    }
+    if (ns.corporation.getMaterial("Agriculture", city, "AI Cores").stored<75){
+      ns.corporation.bulkPurchase("Agriculture", city, "AI Cores", 75 - ns.corporation.getMaterial("Agriculture", city, "AI Cores").stored);
+    }
+    if (ns.corporation.getMaterial("Agriculture", city, "Real Estate").stored<27000){
+      ns.corporation.bulkPurchase("Agriculture", city, "Real Estate", 27000 - ns.corporation.getMaterial("Agriculture", city, "Real Estate").stored);
+    }
     ns.print("Materials bought");
   }
 }
