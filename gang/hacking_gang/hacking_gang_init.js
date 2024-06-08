@@ -2,11 +2,11 @@
 export async function main(ns) {
 	const args = ns.flags([["help", false]]);
 	if (args.help || args._.length < 2) {
-		ns.tprint("This script ascends and buys rootkits for hacking gang members");
+		ns.tprint("This script buys rootkits and sets the task to 'Train Hacking' for hacking gang members");
 		ns.tprint(`Usage: run ${ns.getScriptName()} start stop`);
 		ns.tprint("Example:");
 		ns.tprint(`> run ${ns.getScriptName()} 1 2`);
-    ns.tprint("This would ascend the first 2 members of the gang and buy rootkits for them");
+    ns.tprint("This would buy rootkits for the first 2 members of the gang and get them to train hacking");
 		return;
 	}
 
