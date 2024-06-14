@@ -4,13 +4,13 @@ export async function main(ns) {
   if (ns.singularity.isBusy() == true){
     ns.singularity.stopAction();
   }
-  var agility = ns.getPlayer().skills.agility;
-  while (strength < 200){
+  var strength = ns.getPlayer().skills.strength;
+  while (strength < 100){
     if (ns.singularity.isBusy() == false){
       ns.singularity.gymWorkout("Powerhouse Gym", "strength");
     }
-    strength = ns.getPlayer().skills.strength;
     await ns.sleep(10000);
+    strength = ns.getPlayer().skills.strength;
   }
   ns.singularity.stopAction();
 
@@ -19,12 +19,12 @@ export async function main(ns) {
     ns.singularity.stopAction();
   }
   var agility = ns.getPlayer().skills.agility;
-  while (agility < 200){
+  while (agility < 100){
     if (ns.singularity.isBusy() == false){
       ns.singularity.gymWorkout("Powerhouse Gym", "agility");
     }
-    agility = ns.getPlayer().skills.agility;
     await ns.sleep(10000);
+    agility = ns.getPlayer().skills.agility;
   }
   ns.singularity.stopAction();
 
@@ -33,12 +33,12 @@ export async function main(ns) {
     ns.singularity.stopAction();
   }
   var defense = ns.getPlayer().skills.defense;
-  while (defense < 200){
+  while (defense < 100){
     if (ns.singularity.isBusy() == false){
       ns.singularity.gymWorkout("Powerhouse Gym", "defense");
     }
-    defense = ns.getPlayer().skills.defense;
     await ns.sleep(10000);
+    defense = ns.getPlayer().skills.defense;
   }
   ns.singularity.stopAction();
 
@@ -47,12 +47,12 @@ export async function main(ns) {
     ns.singularity.stopAction();
   }
   var dexterity = ns.getPlayer().skills.dexterity;
-  while (dexterity < 200){
+  while (dexterity < 100){
     if (ns.singularity.isBusy() == false){
       ns.singularity.gymWorkout("Powerhouse Gym", "dexterity");
     }
-    dexterity = ns.getPlayer().skills.dexterity;
     await ns.sleep(10000);
+    dexterity = ns.getPlayer().skills.dexterity;
   }
   ns.singularity.stopAction();
 
