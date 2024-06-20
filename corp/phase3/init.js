@@ -18,9 +18,11 @@ export async function main(ns) {
     ns.print("===" + city + "===");
     if (city!="Sector-12"){
       ns.corporation.expandCity("Tobacco", city);
+      ns.corporation.purchaseWarehouse(city);
     }
     ns.print("Expanded");
 
-    ns.print("Employees hired");
+    ns.print("Warehouse purchased");
   }
+}
 }
