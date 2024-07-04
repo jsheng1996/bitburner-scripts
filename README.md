@@ -8,6 +8,7 @@ server/deploy.js - hydroflame
 
 hn_upgrade.js - iuriguilherme
 
+hack_manager.js - u/SuddenlyDeepThoughts
 
 ## About Bitburner
 
