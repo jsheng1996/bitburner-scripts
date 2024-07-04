@@ -50,6 +50,7 @@ export async function main(ns) {
                 ns.killall(rootableServers[i]);
                 numThreads = (ns.getServerMaxRam(rootableServers[i]) - ns.getServerUsedRam(rootableServers[i]))
                 numThreads /= ns.getScriptRam("g1.js", "home");
+                numThreads = Math.floor(numThreads);
                 if (numThreads > 0) {
                     ns.exec("g1.js", rootableServers[i], numThreads, target);
                 }
@@ -61,6 +62,7 @@ export async function main(ns) {
                 ns.killall(rootableServers[i]);
                 numThreads = (ns.getServerMaxRam(rootableServers[i]) - ns.getServerUsedRam(rootableServers[i]))
                 numThreads /= ns.getScriptRam("h1.js", "home");
+                numThreads = Math.floor(numThreads);
                 if (numThreads > 0) {
                     ns.exec("h1.js", rootableServers[i], numThreads, target);
                 }
